@@ -216,8 +216,9 @@ console.log(artists[3].bio);
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
 // artists[9].name='Vincent Van Gogh';
-artists.push('Vincent Van Gogh');
-
+function changeName(arr,i,name){
+artists.push[9].name='Vincent Van Gogh';
+}
 console.log(artists);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -241,10 +242,17 @@ example born in 1901 and died in 1959 - included / born in 1889 and died in 1925
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(arr){
-  if(arr[i].years <= 1900 || >=2000){
-    return get20s[i].name;
+  const newArr =[];
+  for(i=0; i < arr.length; i--){
+    arr[i].slice[0,20];
+    newArr.push(arr[i]);
   }
+return newArr;
 }
+  // if(arr[i].years = ''){
+  //   return get20s[i].name;
+  
+
 
 
 
@@ -277,10 +285,18 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+function addArtist(id,name,years,genre,nationality,bio){
+    artists.push({
+    id:'20',
+    name:'Your Name Here', 
+    years: 'Your Birth Year-current day',
+    genre: 'Web Design', 
+    nationality: 'Your nationality here',
+    bio: 'Add 1-2 sentences (or use lorem ipsum)'})
+    return artists;
+     }
 
+console.log(addArtist);
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
