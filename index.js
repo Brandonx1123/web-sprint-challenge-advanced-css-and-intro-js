@@ -217,7 +217,7 @@ There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is current
 
 // artists[9].name='Vincent Van Gogh';
 function changeName(arr,i,name){
-artists.push[9].name='Vincent Van Gogh';
+artists.push[8].name='Vincent Van Gogh';
 }
 console.log(artists);
 
@@ -243,17 +243,19 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(arr){
   const newArr =[];
-  for(i=0; i < arr.length; i--){
-    arr[i].includes;
-    newArr.push(arr[i]);
+
+  for(let i=0; i < arr.length; i++){
+    if( arr[i].years >= '1900' && arr[i].years <= '2000'){
+      newArr.push(arr[i].name);
+    }
+    
   }
 return newArr;
 }
-  // if(arr[i].years = ''){
-  //   return get20s[i].name;
+  
   
 
-console.log(get20s);
+console.log(get20s(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -265,12 +267,12 @@ Create a function called `removeArtist` that takes two arguments:
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset and log the number 19.  
 */
-function removeArtist(artist,x) {
-   arr.pop(artists[x]);
-   return removeArtist;
+function removeArtist(arr,num) {
+   arr.pop(num);
+   return arr.length;
 }
    
-console.log(removeArtist[0]);
+// console.log(removeArtist(artists(10)));
 /**
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Create a function called `addArtist` that can accepts an an array  
@@ -286,18 +288,19 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(id,name,years,genre,nationality,bio){
-    artists.push({
-    id,
-    name, 
-    years,
-    genre, 
-    nationality,
-    bio });
-    return artists;
+function addArtist(arr){
+    arr.push ({
+    id:'20',
+    name: 'Brandon S', 
+    years:'1993-2020' ,
+    genre: 'Web Design', 
+    nationality: 'White',
+    bio: 'It doesnt matter what it says, it really doesnt matter, it doesnt matter w'})
+      return arr;
+    
      }
 
-console.log(addArtist('20','Brandon S','1993-2020','Web Design','White','It doesnt matter what it says'));
+console.log(addArtist(artists));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -309,9 +312,14 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(array){
-  const newArr2=[];
-  for( i=0; i<array.length; i--);
+function lotsOfArt(arr){
+  const newArr=[];
+  for( let i=0; i<arr.length; i++){
+    if(arr[i].paintings >= 100){
+      newArr.push(arr[i].name);
+    }
+  }
+  return newArr;
 }
 
 
